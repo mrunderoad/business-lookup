@@ -1,13 +1,13 @@
 require 'rails_helper'
 
-describe "get all businesses route", :type => :request do
+describe "get random business route", :type => :request do
 
   let!(:businesses) { FactoryBot.create_list(:business, 20) }
 
-  before { get '/businesses' }
+  before { get '/businesses/random' }
 
-  it 'returns all businesses' do
-    expect(JSON.parse(response.body).size).to eq(20)
+  it 'returns one random business' do
+    expect(JSON.parse(response.body).size).to eq(1)
   end
 
   it 'returns status code 200' do
