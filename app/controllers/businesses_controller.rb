@@ -35,7 +35,7 @@ class BusinessesController < ApplicationController
     @business = Business.find(params[:id])
     if @business.destroy
       render status: 200, json: {
-        message: "This business has been deleted!"
+        message: "This Business has been deleted!"
       }
     end
   end
