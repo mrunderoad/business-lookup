@@ -10,7 +10,7 @@ describe "search for aa business by name route", :type => :request do
     expect(JSON.parse(response.body).size).to eq(1)
   end
 
-  it 'returns the business with the name: Silver Bakery' do
+  it 'returns the business with the name: Food Shack' do
     expect(JSON.parse(response.body).first['name']).to eq(Business.first.name)
   end
 

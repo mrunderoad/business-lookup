@@ -2,17 +2,9 @@ class BusinessesController < ApplicationController
 
   def index
     name = params[:name]
-    kind = params[:kind]
+    
     if name
       @businesses = Business.search_name(name).paginate(page: params[:page], per_page: 4)
-    elsif !params[:page]
-      @businesses =  Business.all
-    else
-      @businesses = Business.paginate(page: params[:page], per_page: 4)
-    end
-    json_response(@businesses)
-    if kind 
-      @businesses = Business.search_kind(kind).paginate(page: params[:page], per_page: 4)
     elsif !params[:page]
       @businesses =  Business.all
     else

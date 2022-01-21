@@ -7,7 +7,7 @@ describe "get random business route", :type => :request do
   before { get '/businesses/random' }
 
   it 'returns one random business' do
-    expect(JSON.parse(response.body).size).to eq(1)
+    expect(JSON.parse(response.body).size).to eq(4)
   end
 
   it 'returns status code 200' do
