@@ -1,12 +1,25 @@
 class BusinessesController < ApplicationController
 
-  def index
-    name = params[:name]
+  # def index
+  #   name = params[:name]
     
-    if name
-      @businesses = Business.search_name(name).paginate(page: params[:page], per_page: 4)
+  #   if name
+  #     @businesses = Business.search_name(name).paginate(page: params[:page], per_page: 4)
+  #   elsif !params[:page]
+  #     @businesses =  Business.all
+  #   else
+  #     @businesses = Business.paginate(page: params[:page], per_page: 4)
+  #   end
+  #   json_response(@businesses)
+  # end
+
+  def index
+    if params[:name]
+      @businesses = Business.search_name(params[:name])
+    elsif params[:kind]
+      @businesses = Business.search_kind(params[:kind])
     elsif !params[:page]
-      @businesses =  Business.all
+      @businesses = Business.all
     else
       @businesses = Business.paginate(page: params[:page], per_page: 4)
     end
