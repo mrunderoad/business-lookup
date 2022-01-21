@@ -45,6 +45,15 @@ class BusinessesController < ApplicationController
     json_response(@businesses)
   end
 
+  def delete_all
+    @businesses = Business.all
+    if @businesses.delete_all
+      render status: 200, json: {
+        message: "All Businesses have been deleted!"
+      }
+    end
+  end
+
   private
 
   def business_params

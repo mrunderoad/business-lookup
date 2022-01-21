@@ -35,6 +35,8 @@ _Further exploration on this project was Pagination. Pagination is used to divid
 | Delete a Business | DELETE | `localhost:3000/businesses/:id` | _NA_ |
 | Search for Business by name | GET | `localhost:3000/businesses?name=` | _name_ |
 | Paginate Business result | GET | `localhost:3000/businesses?page=` | _page_ |
+| Delete all Businesses | DELETE | `localhost:3000/businesses/clear` | _NA_ |
+| See a random Business | GET | `localhost:3000/businesses/random` | _NA_ |
 ##### Note for endpoints: Searching and paginating requires a name or page number after the = in the url.
 
 ## Responses 
