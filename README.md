@@ -5,7 +5,7 @@
 _This API application is made to add businesses, with name, kind and content description to an API and use postman to GET, PUT, POST and DELETE results. Able to search for businesses by name as well. Paginated responses return 4 messages per page. Made for Epicodus Ruby week 6 solo project._
 
 ## Further Exploration Documentation
-_Further exploration on this project was Pagination. Pagination is used to divide results by page and is fairly simple to implement into a project like this one.
+_Further exploration on this project was Pagination. Pagination is used to divide results by page and is fairly simple to implement into a project like this one. the definition for pagination is as follows: "The sequence of numbers assigned to pages in a book or periodical."
 
 ## Technologies Used
 

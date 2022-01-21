@@ -10,7 +10,7 @@ class Seed
       business = Business.create!(
         name: Faker::Restaurant.name,
         kind: Faker::Restaurant.type,
-        content: Faker::Restaurant.description
+        content: Faker::Movies::Ghostbusters.quote
       )
       puts "Business #{i}: Name is #{business.name}, kind is #{business.kind} and content is '#{business.content}'."
     end

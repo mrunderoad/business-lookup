@@ -40,6 +40,11 @@ class BusinessesController < ApplicationController
     end
   end
 
+  def random
+    @businesses = Business.all.shuffle.sample
+    json_response(@businesses)
+  end
+
   private
 
   def business_params
