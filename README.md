@@ -2,7 +2,7 @@
 #### _By: **Isaac Overstreet**_
 
 # Description 
-_This API application is made to add businesses, with name, kind and content description to an API and use postman to GET, PUT, POST and DELETE results. Able to search for businesses by name as well. Paginated responses return 4 messages per page. Made for Epicodus Ruby week 6 solo project._
+_This API application is made to add businesses, with name, kind and content description to an API and use postman to GET, PUT, POST and DELETE results. Paginated responses return 4 messages per page. The user can search by kind and name, clear all businesses from the API and get a random business by using custom endpoints that are specified below. This is an API made for Epicodus Ruby week 6 solo project._
 
 ## Further Exploration Documentation
 _Further exploration on this project was Pagination. Pagination is used to divide results by page and is fairly simple to implement into a project like this one. the definition for pagination is as follows: "The sequence of numbers assigned to pages in a book or periodical." Pagination can be extremely helpful for huge API's, this API is not very large so it gets divided up into pages with 4 results._
@@ -22,7 +22,7 @@ _Further exploration on this project was Pagination. Pagination is used to divid
 * _Faker_
 * _FactoryBot_
 * _Docker_
-* _Pagination_
+* _Will Paginate_
 
 ## API Endpoints 
 
@@ -35,10 +35,13 @@ _Further exploration on this project was Pagination. Pagination is used to divid
 | Delete a Business | DELETE | `localhost:3000/businesses/:id` | _NA_ |
 | Search for Business by name | GET | `localhost:3000/businesses?name=` | _name_ |
 | Search for Business by kind | GET | `localhost:3000/businesses?kind=` | _kind_ |
-| Paginate Business result | GET | `localhost:3000/businesses?page=` | _page_ |
+| Paginate Businesses results | GET | `localhost:3000/businesses?page=` | _page_ |
 | Delete all Businesses | DELETE | `localhost:3000/businesses/clear` | _NA_ |
 | See a random Business | GET | `localhost:3000/businesses/random` | _NA_ |
-##### Note for endpoints: Searching and paginating requires a name, kind or page number after the = in the url.
+##### Note for endpoints: Searching and paginating requires a name, kind or page number after the = in the url passed in as a parameter.
+
+### Using postman for this project
+* _To add and update a Business follow the endpoint specified above and click on `body` then click the radio button `form-data`. Add the keys(params), and then your own custom naming for them._
 
 ## Responses 
 _Expect responses for Businesses to look like this:_

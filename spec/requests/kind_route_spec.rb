@@ -6,10 +6,6 @@ describe "search for a business by kind route", :type => :request do
 
   before { get "/businesses?kind=#{Business.first.kind}" }
 
-  # it 'returns businesses with kind specified' do
-  #   expect(JSON.parse(response.body).size).to eq(1)
-  # end
-
   it 'returns the business with the kind: Chinese' do
     expect(JSON.parse(response.body).first['kind']).to eq(Business.first.kind)
   end
