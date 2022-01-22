@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "search for aa business by name route", :type => :request do
+describe "search for a business by name route", :type => :request do
 
   let!(:businesses) { FactoryBot.create_list(:business, 20) }
 
